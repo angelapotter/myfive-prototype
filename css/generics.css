@@ -1,0 +1,444 @@
+/*
+    Document   : generics
+    Created on : May 15, 2013, 11:29:35 AM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/*
+    Document   : modules
+    Created on : May 15, 2013, 12:11:23 PM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-size: 90%;
+  font-family: arial, sans-serif; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  padding: 0;
+  color: black;
+  overflow: auto; }
+
+h1 {
+  font-size: 2em;
+  margin-top: 2px; }
+
+h2, h3 {
+  margin: 0; }
+
+h2 {
+  font-size: 1.4em; }
+
+h3 {
+  font-size: 1.1em; }
+
+.flipFrame {
+  position: relative;
+  z-index: 99; }
+  .flipFrame > div {
+    position: relative;
+    z-index: 99; }
+    .flipFrame > div .back.frame {
+      display: none;
+      overflow: hidden; }
+
+/*** TEXT ***/
+/*colors*/
+.white {
+  color: white; }
+
+.lightestGray {
+  color: #eeeeee; }
+
+.lightGray {
+  color: #cccccc; }
+
+.black {
+  color: black; }
+
+.darkGray {
+  color: #555555; }
+
+.gray {
+  color: #999999; }
+
+.lightGray {
+  color: #cccccc; }
+
+.teal {
+  color: #3686a5; }
+
+.green {
+  color: #009933; }
+
+.lightGreen {
+  color: #7fc243; }
+
+.red {
+  color: #c24d4a; }
+
+.orange {
+  color: #ec681f; }
+
+.recipient.color {
+  color: #009933; }
+
+.source.color {
+  color: #1362bb; }
+
+.client.color {
+  color: #8a239d; }
+
+.gig.color {
+  color: #ec681f; }
+
+.whiteBG {
+  background-color: white; }
+
+.grayBG, body, .disabledButton, .disabledButton:hover {
+  background-color: #cccccc; }
+
+.lightGreenBG {
+  background-color: #7fc243 !important; }
+
+.darkGrayBG {
+  background-color: #555555 !important; }
+
+.yellowBG {
+  background-color: #fff0c4 !important; }
+
+.lightTealBG {
+  background-color: #b0dcdf; }
+
+.grayedOut {
+  opacity: 0.7; }
+
+.bold {
+  font-weight: bold; }
+
+.italic {
+  font-style: italic; }
+
+.border {
+  border: 1px solid #cccccc; }
+
+.radius {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+
+/*alignment etc*/
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.clear {
+  clear: both; }
+
+.inline {
+  display: inline; }
+
+.inlineBlock {
+  display: inline-block; }
+
+.block {
+  display: block !important; }
+
+.noDisplay {
+  display: none !important; }
+
+.alignL {
+  text-align: left !important; }
+
+.alignR {
+  text-align: right !important; }
+
+.small {
+  font-size: 0.8em; }
+
+.big {
+  font-size: 1.3em; }
+
+.regMarg {
+  margin: 20px; }
+
+.smallMarg {
+  margin: 15px !important; }
+
+.regPad {
+  padding: 20px; }
+
+.smallPad, .card .content {
+  padding: 15px !important; }
+
+.topPad20 {
+  padding-top: 20px !important; }
+
+.botPad20 {
+  padding-bottom: 20px !important; }
+
+.sidePad {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.padR10 {
+  padding-right: 10px; }
+
+.padIndent10 {
+  padding-left: 10px; }
+
+.allPad10 {
+  padding: 10px; }
+
+.marg20 {
+  margin: 20px; }
+
+.marg15 {
+  margin: 15px !important; }
+
+.topMarg5 {
+  margin-top: 5px !important; }
+
+.topMarg10 {
+  margin-top: 10px !important; }
+
+.topMarg20 {
+  margin-top: 20px !important; }
+
+.topMarg30 {
+  margin-top: 30px !important; }
+
+.topMarg50 {
+  margin-top: 50px !important; }
+
+.botMarg10 {
+  margin-bottom: 10px !important; }
+
+.botMarg15 {
+  margin-bottom: 15px !important; }
+
+.botMarg20 {
+  margin-bottom: 20px !important; }
+
+.botMarg30 {
+  margin-bottom: 30px !important; }
+
+.botMarg50 {
+  margin-bottom: 50px !important; }
+
+.margL1of20 {
+  margin-left: 6.6666px; }
+
+.margR1of20 {
+  margin-right: 6.6666px; }
+
+.margL2of20 {
+  margin-left: 13.3333px; }
+
+.margR2of20 {
+  margin-right: 13.3333px; }
+
+.margR10 {
+  margin-right: 10px; }
+
+.margR15 {
+  margin-right: 15px; }
+
+.margL10 {
+  margin-left: 10px; }
+
+.sideMarg {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.indent5 {
+  margin-left: 5px !important; }
+
+.indent10 {
+  margin-left: 10px !important; }
+
+.indent15 {
+  margin-left: 15px !important; }
+
+.indent20 {
+  margin-left: 20px !important; }
+
+.indent30 {
+  margin-left: 30px !important; }
+
+.indent50 {
+  margin-left: 50px !important; }
+
+.indent70 {
+  margin-left: 70px !important; }
+
+.indent82 {
+  margin-left: 82px !important; }
+
+.noMarg {
+  margin: 0; }
+
+.noBotMarg {
+  margin-bottom: 0; }
+
+.noMargR {
+  margin-right: 0 !important; }
+
+.noMargL {
+  margin-left: 0 !important; }
+
+.noBorder {
+  border: none !important; }
+
+.twoColumn {
+  width: 48%; }
+
+.singleSpaced {
+  line-height: 100%;
+  margin: 0; }
+
+.doubleSpaced {
+  line-height: 200%; }
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.vertMid, .header {
+  display: inline-table; }
+  .vertMid > div, .header > div, .vertMid a, .header a {
+    display: table-cell;
+    vertical-align: middle; }
+
+.w100 {
+  width: 100%; }
+
+.w66 {
+  width: 66.6667%; }
+
+.w50 {
+  width: 50%; }
+
+.w33 {
+  width: 33.3333%; }
+
+.w25 {
+  width: 25%; }
+
+.overflowHidden {
+  overflow: hidden; }
+
+/*** LINKS ***/
+a {
+  text-decoration: none; }
+  a:link {
+    color: #1362bb; }
+  a:hover {
+    color: black; }
+  a:visited {
+    color: #8a239d; }
+
+/*** HR ***/
+hr {
+  color: #cccccc;
+  background-color: #cccccc;
+  height: 1px;
+  border: 0;
+  width: 100%;
+  margin: 0 auto; }
+
+/*** FORMS & BUTTONS ***/
+textarea, input {
+  font-family: arial,sans-serif !important; }
+
+input {
+  margin: 4px 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: arial,sans-serif; }
+
+button {
+  font-weight: bold;
+  min-height: 22px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  text-align: center; }
+  button span {
+    padding: 2px 4px; }
+
+button.navigate {
+  background-color: #00802b; }
+  button.navigate:hover {
+    background-color: #009933; }
+
+button.submit {
+  background-color: #307692; }
+  button.submit:hover {
+    background-color: #3686a5; }
+
+button.snooze {
+  background-color: #b5403d; }
+  button.snooze:hover {
+    background-color: #c24d4a; }
+
+button.gig {
+  background-color: #df5b13; }
+  button.gig:hover {
+    background-color: #ec681f; }
+
+.bigButton, .hugeButton {
+  margin: 10px auto;
+  padding: 0 12px; }
+
+.bigButton {
+  font-size: 1.4em;
+  height: 54px; }
+
+.hugeButton {
+  font-size: 1.8em;
+  height: 62px; }
+
+.disabledButton {
+  color: #999999 !important; }
+  .disabledButton:hover {
+    cursor: default; }
+
+.inheritColor {
+  color: inherit; }
+
+/*** IMAGES (MOSTLY) ***/
+.iconStartLine, .iconInline {
+  display: inline-block;
+  margin-right: 4px; }
+
+.iconInline {
+  margin-left: 4px; }
+
+/* CONTAINERS */
+.card {
+  display: inline-block; }
+  .card .content {
+    font-size: 0.9em; }

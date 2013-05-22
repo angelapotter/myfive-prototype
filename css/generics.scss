@@ -1,0 +1,275 @@
+/*
+    Document   : generics
+    Created on : May 15, 2013, 11:29:35 AM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+@import "modules";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  @extend .grayBG;
+  font: {
+    size: 90%;
+    family: arial, sans-serif;
+  }
+}
+h1, h2, h3 {
+  font-weight: normal;
+  padding: 0;
+  color: black;
+  overflow: auto;
+}
+h1 {
+  font-size: 2em;
+  margin-top: 2px;
+}
+h2, h3 { margin: 0; }
+
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.1em; }
+
+.header { @extend .vertMid; }
+.flipFrame {
+  @include zIndex(99);
+  > div {
+    @include zIndex(99);
+    .back.frame {
+      display: none;
+      overflow: hidden;
+    }
+  }
+}
+
+/*** TEXT ***/
+
+/*colors*/
+.white { color: white; }
+.lightestGray { color: $lightestGray; }
+.lightGray { color: $lightGray; }
+.black { color: black; }
+.darkGray { color: $darkGray; }
+.gray { color: $gray; }
+.lightGray { color: $lightGray; }
+.teal { color: $teal; }
+.green { color: $green; }
+.lightGreen { color: $lightGreen; }
+.red { color: $red; }
+.orange { color: $orange; }
+
+.recipient.color { color: $green; }
+.source.color { color: $blue; }
+.client.color { color: $purple; }
+.gig.color { color: $orange; }
+
+.whiteBG { background-color: white; }
+.grayBG { background-color: $lightGray; }
+.lightGreenBG { background-color: $lightGreen !important; }
+.darkGrayBG { background-color: $darkGray !important; }
+.yellowBG { background-color: $lightYellow !important; }
+.lightTealBG { background-color: $lightTeal; }
+.grayedOut { opacity: 0.7; }
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+.border { border: $border; }
+.radius { @include radius($radius); }
+
+/*alignment etc*/
+.right { float: right; }
+.left { float: left; }
+.clear { clear: both; }
+
+.inline { display: inline; }
+.inlineBlock { display: inline-block; }
+.block { display: block !important; }
+.noDisplay { display: none !important; }
+
+.alignL { text-align: left !important; }
+.alignR { text-align: right !important; }
+
+.small { font-size: 0.8em; }
+.big { font-size: 1.3em; }
+
+.regMarg { margin: $regMarg; }
+.smallMarg { margin: $smallMarg !important; }
+.regPad { padding: $regMarg; }
+.smallPad { padding: $smallMarg !important; }
+
+.topPad20 { padding-top: 20px !important; }
+.botPad20 { padding-bottom: 20px !important; }
+.sidePad {
+  padding: { left: 10px; right: 10px; }    
+}
+.padR10 { padding-right: 10px; }
+.padIndent10 { padding-left: 10px; }
+.allPad10 { padding: 10px; }
+
+.marg20 { margin: 20px; }
+.marg15 { margin: 15px !important; }
+
+.topMarg5 { margin-top: 5px !important; }
+.topMarg10 { margin-top: 10px !important; }
+.topMarg20 { margin-top: 20px !important; }
+.topMarg30 { margin-top: 30px !important; }
+.topMarg50 { margin-top: 50px !important; }
+
+.botMarg10 { margin-bottom: 10px !important; }
+.botMarg15 { margin-bottom: 15px !important; }
+.botMarg20 { margin-bottom: 20px !important; }
+.botMarg30 { margin-bottom: 30px !important; }
+.botMarg50 { margin-bottom: 50px !important; }
+
+.margL1of20 { margin-left: 6.6666px; }
+.margR1of20 { margin-right: 6.6666px; }
+.margL2of20 { margin-left: 13.3333px; }
+.margR2of20 { margin-right: 13.3333px; }
+
+.margR10 { margin-right: 10px; }
+.margR15 { margin-right: 15px; }
+
+.margL10 { margin-left: 10px; }
+
+.sideMarg {
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.indent5 { margin-left: 5px !important; }
+.indent10 { margin-left: 10px !important; }
+.indent15 { margin-left: 15px !important; }
+.indent20 { margin-left: 20px !important; }
+.indent30 { margin-left: 30px !important; }
+.indent50 { margin-left: 50px !important; }
+.indent70 { margin-left: 70px !important; }
+.indent82 { margin-left: 82px !important; }
+
+.noMarg { margin: 0; }
+.noBotMarg { margin-bottom: 0; }
+.noMargR { margin-right: 0 !important; }
+.noMargL { margin-left: 0 !important; }
+
+.noBorder { border: none !important; }
+
+.twoColumn { width:48% }
+.singleSpaced { line-height:100%; margin:0; }
+.doubleSpaced { line-height:200%; }
+
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+.vertMid {
+  display: inline-table;
+  > div, a {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.w100 { width: 100%; }
+.w66 { width: 66.6667%; }
+.w50 { width: 50%; }
+.w33 { width: 33.3333%; }
+.w25 { width: 25%; }
+
+.overflowHidden { overflow: hidden; }
+
+/*** LINKS ***/
+a {
+  text-decoration: none;
+  &:link { color: $blue; }
+  &:hover { color: black; }
+  &:visited { color: $purple; }
+}
+
+/*** HR ***/
+hr {
+  color: $lightGray;
+  background-color: $lightGray;
+  height: 1px;
+  border: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*** FORMS & BUTTONS ***/
+
+textarea, input { font-family: arial,sans-serif !important; }
+
+input {
+  margin: 4px 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: arial,sans-serif;
+}
+button {
+  font-weight: bold;
+  min-height: 22px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  span { padding: 2px 4px; }
+}
+
+button.navigate { @include buttonBG($green); }
+button.submit { @include buttonBG($teal); }
+button.snooze { @include buttonBG($red); }
+button.gig { @include buttonBG($orange); }
+
+.bigButton, .hugeButton {
+  margin: 10px auto;
+  padding: 0 12px;
+}
+.bigButton {
+  font-size: 1.4em;
+  height: 54px;
+}
+.hugeButton {
+  font-size: 1.8em;
+  height: 62px;
+}
+
+.disabledButton {
+  @extend .grayBG;
+  color: $gray !important;
+  &:hover {
+    @extend .grayBG;
+    cursor: default;
+  }
+}
+
+.inheritColor { color: inherit; }
+
+/*** IMAGES (MOSTLY) ***/
+.iconStartLine {
+  display: inline-block;
+  margin-right: 4px;
+}
+.iconInline {
+  @extend .iconStartLine;
+  margin-left: 4px;
+}
+
+/* CONTAINERS */
+.card {
+  display: inline-block;
+  .content {
+    @extend .smallPad;
+    font-size: 0.9em;
+  }
+}
+

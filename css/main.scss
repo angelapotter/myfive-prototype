@@ -1,0 +1,530 @@
+/*
+    Document   : main
+    Created on : May 15, 2013, 11:19:52 AM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+/**************** HEADER - biggest wrappers & gray bar ****************/
+
+@import "modules";
+@import "generics";
+
+#all { width: 100%; }
+#grayBar {
+  width: 100%;
+  background-color: $darkGray;
+  height: 24px;
+  color: white;
+  padding: 0;
+  margin: 0 auto;
+}
+#grayBar .mainArea div {
+  display: inline;
+  margin: 3px 12px 0 12px;
+}
+#grayBar div img { margin-top: 2px; }
+
+/**************** HEADER - main wrappers & nav ****************/
+
+.mainArea {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+#navBar {
+  @extend .border;
+  @extend .radius;
+  @extend .vertMid;
+  @extend .w100;
+  background-color: $lightGray;
+  cursor: pointer;
+  font-weight: bold;
+  height: 42px;
+  margin: 10px 0 14px;
+  overflow: hidden;
+  text-align: center;
+  border-spacing: 0;
+  .tab {
+    color: inherit !important;
+    padding: 0 10px;
+    border-right: $border;
+  }
+  .tab#elephant {
+    @extend .lightTealBG;
+    vertical-align: bottom;
+    padding: 0 4px 2px 8px;
+    border: {
+      top-left-radius: 6px;
+      bottom-left-radius: 6px;
+    }
+  }
+  .tab#track {
+    background-color: $orange;
+    color: white !important;
+    border: {
+      top-right-radius: 6px;
+      bottom-right-radius: 6px;
+      right: none;
+    }    
+  }
+}
+
+/*** LEFT NAV ***/
+
+#leftNav {
+  width: 120px;
+  padding: 12px 0;
+  text-align: right;
+  float: left;
+  position: relative;
+  font-size: 1.05em;
+  .tab {
+    padding: 10px 22px 10px 10px;
+    color: $darkGray;
+    width: 90px;
+  }
+  .active {
+    background-color: white !important;
+    width: 125px;
+    z-index: 99999;
+    position: relative;
+    border: {
+      top: $border;
+      bottom: $border;
+    }    
+    .tab {
+      color: $lightTeal !important;
+      font-weight: bold !important;
+    }
+  }
+}
+
+/**************** FOOTER ****************/
+#resetGig {
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  border: 2px solid $lightGray;
+  color: $gray;
+}
+
+/**********************************************/
+/**************** BIG WRAPPERS ****************/
+/*********************************************/
+
+.mainFrame {
+  //@include zIndex(9);
+  overflow: visible;
+  padding-bottom: 20px;
+  .main {
+    //@include zIndex(9);
+    @extend .whiteBG;
+    @extend .radius;
+    //overflow: auto;
+    > .content {
+      @extend .clear;
+      @extend .regPad;
+    }
+    #dollarValue {
+      width: 70px;
+      font-size: 1.1em;
+    }
+  }
+}
+
+/********************************************/
+/**************** CREATE GIG ****************/
+/********************************************/
+
+#instructions {
+  overflow: auto;
+  margin-bottom: 30px;
+}
+
+h2.floating {
+  @extend .darkGray;
+  margin: 10px 0 30px;
+  //overflow: visible;
+}
+
+/*** PARITICIPANTS ***/
+
+/* content wrappers */
+
+.contact.tile {
+  @include zIndex(999999);
+  @extend .vertMid;
+  float: left;
+  background-color: $teal;
+  color: black;
+  height: 30px;
+  margin: 10px 10px 0 0;
+  padding: 0 4px;
+  cursor: move;
+  > div { margin: 0 10px; }
+  .profile {
+    height: 14px;
+    width: 14px;
+    margin: 4px 6px 0;
+  }
+}
+#contactInput { min-width: 220px; }
+
+/* jQuery styling ALL */
+
+/*generic widgets*/
+.ui-widget-content {
+  font-size: 1em !important;
+  color: $darkestGray;
+  font-family: "arial", sans-serif !important;
+}
+.ui-widget {
+  input, select, textarea { font-size: 0.9em !important; }
+  .bigButton { font-size: 1.4em !important; }
+}
+/*autocomplete*/
+.ui-widget-content {
+  color: $darkestGray !important;
+  border: $border;
+}
+.ui-menu {
+  padding: 1px;
+}
+.ui-autocomplete {
+  overflow: hidden;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  box-shadow: none !important;
+}
+.ui-dialog {
+  overflow: hidden;
+  box-shadow: 0px 0px 6px $lightGray;
+}
+#dialog, .ui-dialog-buttonpane { box-shadow: none !important; }
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  background-image: none !important;
+  background-color: $lightTeal;
+  border: none;
+  border-radius: 0;
+  overflow: hidden !important;
+}
+/*dialog*/
+.ui-widget-header,
+.ui-datepicker-header {
+  background-image: none;
+  background-color: $lightTeal;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: $border;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background-image: none;
+  background-color: #eee;
+  overflow: hidden !important;
+}
+.ui-dialog,
+.ui-datepicker,
+.ui-dialog-buttonpane {
+  margin-top: 0 !important;
+  padding: 0;
+}
+.ui-dialog-buttonpane {
+  border-width: 0 !important;
+}
+.ui-dialog-title { font-size: 1.2em; }
+.ui-dialog .ui-dialog-titlebar-close { /*adjusts close button for title font size*/
+  margin: -12px 0 0 0 !important;
+}
+.ui-datepicker table { /*for table*/
+  margin: 0 0 2px 0 !important;
+}
+
+/* contact cards */
+
+.header.mini {
+  padding-left: $smallMarg;
+  padding-right: $smallMarg;
+  height: 38px;
+  h2 {
+    margin-left: 2px;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  img { padding-top: 0; }
+}
+
+/* CONTACT CARD generics */
+.contact.card {
+  @extend .left;
+  @extend .w33;
+  .main {
+    min-height: 171px;
+  }
+  .content {
+    .right {
+      margin-top: 2px;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .profile {
+      @extend .left;
+      margin: 0 8px 4px 0;
+    }
+    p, h3 { margin: 2px 0 6px; }
+    .jobTitle { @extend .darkGray; }
+    .iconStartLine { margin-bottom: -4px; }
+    &.back {
+      > p, h3 { @extend .inlineBlock; }
+      > p { @extend .indent5; }
+      .connector {
+        @extend .topMarg10;
+      }
+      .rolesHist {
+        @extend .topMarg20;
+        > div {
+          font-size: 1.6em;
+          @extend .w33;
+          @extend .left;
+        }
+      }
+    }
+  }
+  &.droppable {
+    min-height: 114px;
+    .subhead {
+      font-size: 0.7em;
+      color: #666;
+      padding: 2px 15px;
+      border-bottom: $border;
+      border-top: $border;
+    }
+    .content h3.hint {
+      color: $gray;
+      font-weight: normal;
+      margin: 25px auto 0;
+      text-align: center;
+    }
+  }
+  &.dropHere h3.hint {
+    color: $teal !important;
+    font-weight: bold !important;
+  }
+}
+
+/*** DETAILS ***/
+
+input#gigTitle { min-width: 380px; }
+
+.insetArea {
+  background-color: white;
+  padding: 25px;
+  border-top: $border;
+  border-bottom: $border;
+  margin: 10px;
+}
+
+/*** TRACK ***/
+
+input.date { width: 50px; }
+.progressBar {
+  @extend .left;
+  width: 620px;
+  text-align: center;
+  > div {
+    @extend .center;
+    @extend .inlineBlock;
+  }
+  .topLabels {
+    @extend .topMarg30;
+    @extend .botMarg10;
+    .progLabel {
+      cursor: default;
+    }
+  }
+  .progLabel {
+    @extend .left;
+    width: 124px;
+  }
+  .actualBar {
+    .ball, .bar {
+      @extend .grayBG;
+      margin-left: 12px;
+      @extend .left;
+      &:first-child { margin-left: 0; }
+    }
+    .ball {
+      @include radius(10px);
+      height: 20px;
+      width: 20px;
+    }
+    .bar {
+      @extend .radius;
+      height: 6px;
+      width: 80px;
+      margin-top: 7px;
+    }
+  }
+  .editDates {
+    @extend .clear;
+    @extend .submit;
+    @extend .topMarg10;
+    @extend .botMarg20;
+  }
+}
+
+.ui-datepicker-trigger { margin: 0 0 -7px 6px; }
+
+.reminderMessage {
+  @extend .white;
+  font: {
+    size: 1.1em;
+    style: italic;
+  }  
+  margin: 0 auto 40px;
+}
+#saveAndView {
+  @extend .block;
+  @extend .center;
+}
+
+/*** VIEW TICKET ***/
+
+.editLink, .selectContactInfo { font-size: 0.75em; }
+.editLink { @extend .inlineBlock; }
+.header .editLink {
+  position: relative;
+  top: 50%;
+  margin-top: -0.45em;
+}
+.grayHeader {
+  @extend .vertMid;
+  background-color: white;
+  border: {
+    bottom: $border;
+    radius: $radius $radius 0 0;
+  }
+  @extend .w100;
+  height: 50px;
+  position: relative;
+  h2 {
+    display: inline-block;
+    font-size: 1.3em;
+    margin: 0 15px;
+  }
+  p {
+    position: relative;
+    top: 50%;
+    right: 15px;
+    margin-top: -0.6em;
+  }
+  img {
+    margin-left: 15px;
+    padding-top: 3px;
+    max-width: 41px;
+  }
+}
+
+.notificationGreen {
+  font-style: italic;
+  color: $green;
+  text-align: center;
+  padding: 12px 0;
+  margin: 4px 0 30px 0;
+  border: 2px solid lighten($green, 5%);
+}
+.grayBox {
+  background-color: $lightestGray;
+  width: 300px;
+  padding: 10px 15px 10px 10px;
+  margin: 0 auto;
+  color: $darkestGray;
+  text-align: left;
+  li { margin-bottom: 0.5em; }
+}
+
+.onExpand { display: none; }
+
+.footerOptions {
+  overflow: auto;
+  > div {
+    @extend .inlineBlock;
+    @extend .w25;
+    @extend .darkGray;
+    text-align: center;
+    float: left;
+  }
+}
+
+/***************************************/
+/************** REMINDERS **************/
+/***************************************/
+
+#reminders .mainFrame > .content { width: 824px; }
+
+.reminder.card {
+  width: 260px;
+  margin: 0 10px 10px 0;
+  float: left;
+  .header {
+    @extend .lightTealBG;
+    height: 70px;
+    width: 100%;
+    > div {
+      text-align: center;
+      padding: 6px;
+    }
+  }
+  .rating {
+    position: absolute;
+    top: 15px;
+    &:nth-of-type(1) { left: 15px; }
+    &:nth-of-type(2) {
+      right: 15px;
+      text-align: right;
+    }
+  }
+}
+
+/***************************************/
+/************** CONTACTS ***************/
+/***************************************/
+
+.contact.card.reg {
+  width: 298px;
+  height: 128px;
+  font-size: 0.85em;
+  display: inline-block;
+  h3 { font-size: 1.3em; }
+  p { margin: 0 0 2px 0; }
+  .content { @extend .noBotMarg; }
+  .grayBG {
+    height: 21px;
+    padding: 7px 0 0 13px;
+    font-weight: bold;
+  }
+}
+
+body.contacts .tags {
+  width: 190px;
+  height: 100%;
+}
+.grayBG > .content {
+  padding: 15px;
+}

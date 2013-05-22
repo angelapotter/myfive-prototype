@@ -1,0 +1,53 @@
+/*
+    Document   : modules
+    Created on : May 15, 2013, 12:11:23 PM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+$darkestGray: #333;
+$darkGray: #555;
+$gray: #999;
+$lightGray: #ccc;
+$lightestGray: #eee;
+$lightYellow: #fff0c4;
+
+$teal: #3686a5;
+$lightTeal: #b0dcdf;
+$green: #009933;
+$lightGreen: #7fc243;
+$red: #c24d4a;
+$orange: #ec681f;
+$blue: #1362bb;
+$purple: #8a239d;
+$lightPurple: #b8b1ca;
+
+$border: 1px solid $lightGray;
+$radius: 4px;
+
+$regMarg: 20px;
+$smallMarg: 15px;
+
+@mixin buttonBG($color) {
+  background-color: darken($color, 5%);
+  &:hover {
+    background-color: $color;
+  }  
+}
+
+@mixin zIndex($number) {
+  position: relative;
+  z-index: $number;
+}
+
+@mixin radius($pixels) {
+  border-radius: $pixels;
+  -webkit-border-radius: $pixels;
+  -moz-border-radius: $pixels;
+}

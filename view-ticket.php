@@ -1,78 +1,75 @@
 <?php
 $title='View Ticket &amp; Share';
 $bodyId='viewTicket';
-include 'header.php';
+$bodyClass='myGigs viewTicket';
+include 'includes/header-footer/header.php';
 ?>
 
-<!-- SHARING OLD SIDEBAR -->
-  <div id="shareSidebar" style="display:none;">
-    <div class="item">
-      <img class="left iconStartLine" src="images/profile-pic-40.png" />
-      <div id="createdBy"><!-- fill created by --></div>
-      <div id="creationDate"><?php echo date("n/j/y").' at '.date("h:ia"); ?> </div>
-      <div class="clear"></div>
-    </div>
-    <div class="item topMarg20">
-      <img src="images/pass.png" alt="(pass icon)" />
-      <h2 id="shareHeading" class="inline teal">Share this gig!</h2>
-      <div id="notSharedYet" class="small"><strong>This gig hasn't been shared yet.</strong> Select the participants you want to share with, then hit "Share now."</div>
-    </div>
-    <div class="item right">
-    </div>
-    <div class="clear"></div>
-    <hr />
-    <div class="item">
-    </div>
-  </div>
-        
 <!--LEFT BOX-->
-<div class="contentFrame">
-  <div class="grayHeader">
-    <div>
-      <h2 id="gigTitle"><!-- fill title --></h2>
-      <div class="editLink inlineBlock"><a href="#">edit</a></div>
+<div class="mainFrame">
+  <div class="main darkGrayBG">
+    <div class="grayHeader">
+      <div>
+        <h2 id="gigTitle"><!-- fill title --></h2>
+        <div class="editLink inlineBlock"><a href="#">edit</a></div>
+      </div>
+      <div>
+        <h3 class="darkGray inlineBlock">Edit gig</h3>
+      </div>
     </div>
-    <div>
-      <img class="iconStartLine" src="images/collapsed-arrow.png" style="margin-bottom: -2px;" />
-      <h3 class="darkGray inlineBlock">Options</h3>
+    <div class="content lightGray">
+          
+    <?php include 'includes/content/progress-bar.php'; ?>
+    
     </div>
   </div>
-  <div class="manageSharing sharedWithFrame yellowBG left allPad10"><!-- filed shared with info --></div>
-  <div class="content">
-    <div class="notificationGreen">Congrats! Your gig has been created. If you want you can invite guests, edit the ticket, or update the progress of the gig. <a href="#">See all active gigs</a></div>
-      
-    <?php include 'progress-bar.php'; ?>
-    
-    <div id="shareCallOut" class="manageSharing center"><button class="botMarg30 tealButton bigButton" type="button"><span>Bring someone into the loop</span></button></div>
+</div>
 
-    <?php include 'contact-cards.php'; ?>
+<?php include 'includes/content/contact-droppables.php'; ?>
 
-    <!--description-->
-    <h2 class="teal topMarg20 botMarg10">Description</h2>
-    <div id="gigDescription" class="botMarg20 inlineBlock"><!-- fill description --></div><div class="editLink indent15"><a href="#">edit</a></div>
+<!--description-->
+<div class="mainFrame left w66">
+  <div class="main margR1of20">
+    <div class="content">
+      <h2 class="teal botMarg10">Description</h2>
+      <div id="gigDescription" class="botMarg20 inlineBlock"><!-- fill description --></div><div class="editLink indent15"><a href="#">edit</a></div>
+    </div>
+  </div>
+</div>
+<div class="mainFrame right w33">
+  <div class="main margL2of20 yellowBG">
+    <div class="content">
+      <h2 class="botMarg10">Notes</h2>
+      <div id="noteToSelf" class="botMarg20 inlineBlock"><!-- fill notes --></div><div class="editLink indent15"><a href="#">edit</a></div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
 
-    <!--personal notes-->
-    <div class="personalNotes topMarg20">
-      <div class="header center">
-        <img src="images/your-eyes-only-black.png" />
-        <h2 class="inline black">PERSONAL NOTES</h2>
-        <div class="small topMarg10 darkGray">The information you enter here is confidential.<br />We'll never share your personal notes with anyone.</div>
-      </div>
-      <div class="insetArea">
-        <div class="center">
-          <h3 class="inlineBlock"><strong>How much business is this gig worth to you?</strong><span class="indent20">$</span></h3>
-          <input id="dollarValue" type="text" maxlength="10" />
-        </div>
-        <hr class="topMarg20 botMarg20" />
-        <h3 class="darkGray">Note to self:</h3>
-        <div class="noteFrame">
-          <textarea id="noteToSelf" rows="4" cols="120" placeholder="Write a private note here. No one else will ever see it."></textarea>
-        </div>
+<!--personal notes-->
+<div class="mainFrame">
+  <div class="main">
+    <div class="content">
+      <h2 class="teal inlineBlock">Ratings &nbsp;</h2>
+      <div class="small inlineBlock botMarg10 darkGray">Don't worry &mdash; we'll never share your info</div>
+      <div class="center topMarg30 botMarg20">
+        <h3 class="inlineBlock"><strong>How much business is this gig worth to you?</strong><span class="indent20">$</span><span id="dollarValue" type="text" maxlength="10"></span></h3><div class="editLink indent15"><a href="#">edit</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<?php include 'share-lb.php'; ?>
+<!-- footer options -->
+<div class="mainFrame">
+  <div class="main">
+    <div class="content footerOptions">
+      <div>Edit</div>
+      <div>Duplicate</div>
+      <div>Archive</div>
+      <div>Delete</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
 
-<?php include 'footer.php'; ?>
+<?php include 'includes/header-footer/footer.php'; ?>

@@ -1,0 +1,866 @@
+/*
+    Document   : main
+    Created on : May 15, 2013, 11:19:52 AM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/**************** HEADER - biggest wrappers & gray bar ****************/
+/*
+    Document   : modules
+    Created on : May 15, 2013, 12:11:23 PM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/*
+    Document   : generics
+    Created on : May 15, 2013, 11:29:35 AM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/*
+    Document   : modules
+    Created on : May 15, 2013, 12:11:23 PM
+    Author     : Angela
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-size: 90%;
+  font-family: arial, sans-serif; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  padding: 0;
+  color: black;
+  overflow: auto; }
+
+h1 {
+  font-size: 2em;
+  margin-top: 2px; }
+
+h2, h3 {
+  margin: 0; }
+
+h2 {
+  font-size: 1.4em; }
+
+h3 {
+  font-size: 1.1em; }
+
+.flipFrame {
+  position: relative;
+  z-index: 99; }
+  .flipFrame > div {
+    position: relative;
+    z-index: 99; }
+    .flipFrame > div .back.frame {
+      display: none;
+      overflow: hidden; }
+
+/*** TEXT ***/
+/*colors*/
+.white, .reminderMessage {
+  color: white; }
+
+.lightestGray {
+  color: #eeeeee; }
+
+.lightGray {
+  color: #cccccc; }
+
+.black {
+  color: black; }
+
+.darkGray, h2.floating, .contact.card .content .jobTitle, .footerOptions > div {
+  color: #555555; }
+
+.gray {
+  color: #999999; }
+
+.lightGray {
+  color: #cccccc; }
+
+.teal {
+  color: #3686a5; }
+
+.green {
+  color: #009933; }
+
+.lightGreen {
+  color: #7fc243; }
+
+.red {
+  color: #c24d4a; }
+
+.orange {
+  color: #ec681f; }
+
+.recipient.color {
+  color: #009933; }
+
+.source.color {
+  color: #1362bb; }
+
+.client.color {
+  color: #8a239d; }
+
+.gig.color {
+  color: #ec681f; }
+
+.whiteBG, .mainFrame .main {
+  background-color: white; }
+
+.grayBG, body, .disabledButton, .disabledButton:hover, .progressBar .actualBar .ball, .progressBar .actualBar .bar {
+  background-color: #cccccc; }
+
+.lightGreenBG {
+  background-color: #7fc243 !important; }
+
+.darkGrayBG {
+  background-color: #555555 !important; }
+
+.yellowBG {
+  background-color: #fff0c4 !important; }
+
+.lightTealBG, #navBar .tab#elephant, .reminder.card .header {
+  background-color: #b0dcdf; }
+
+.grayedOut {
+  opacity: 0.7; }
+
+.bold {
+  font-weight: bold; }
+
+.italic {
+  font-style: italic; }
+
+.border, #navBar {
+  border: 1px solid #cccccc; }
+
+.radius, #navBar, .mainFrame .main, .progressBar .actualBar .bar {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+
+/*alignment etc*/
+.right {
+  float: right; }
+
+.left, .contact.card, .contact.card .content .profile, .contact.card .content.back .rolesHist > div, .progressBar, .progressBar .progLabel, .progressBar .actualBar .ball, .progressBar .actualBar .bar {
+  float: left; }
+
+.clear, .mainFrame .main > .content, .progressBar .editDates {
+  clear: both; }
+
+.inline {
+  display: inline; }
+
+.inlineBlock, .contact.card .content.back > p, .contact.card .content.back h3, .progressBar > div, .editLink, .footerOptions > div {
+  display: inline-block; }
+
+.block, #saveAndView {
+  display: block !important; }
+
+.noDisplay {
+  display: none !important; }
+
+.alignL {
+  text-align: left !important; }
+
+.alignR {
+  text-align: right !important; }
+
+.small {
+  font-size: 0.8em; }
+
+.big {
+  font-size: 1.3em; }
+
+.regMarg {
+  margin: 20px; }
+
+.smallMarg {
+  margin: 15px !important; }
+
+.regPad, .mainFrame .main > .content {
+  padding: 20px; }
+
+.smallPad, .card .content {
+  padding: 15px !important; }
+
+.topPad20 {
+  padding-top: 20px !important; }
+
+.botPad20 {
+  padding-bottom: 20px !important; }
+
+.sidePad {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.padR10 {
+  padding-right: 10px; }
+
+.padIndent10 {
+  padding-left: 10px; }
+
+.allPad10 {
+  padding: 10px; }
+
+.marg20 {
+  margin: 20px; }
+
+.marg15 {
+  margin: 15px !important; }
+
+.topMarg5 {
+  margin-top: 5px !important; }
+
+.topMarg10, .contact.card .content.back .connector, .progressBar .editDates {
+  margin-top: 10px !important; }
+
+.topMarg20, .contact.card .content.back .rolesHist {
+  margin-top: 20px !important; }
+
+.topMarg30, .progressBar .topLabels {
+  margin-top: 30px !important; }
+
+.topMarg50 {
+  margin-top: 50px !important; }
+
+.botMarg10, .progressBar .topLabels {
+  margin-bottom: 10px !important; }
+
+.botMarg15 {
+  margin-bottom: 15px !important; }
+
+.botMarg20, .progressBar .editDates {
+  margin-bottom: 20px !important; }
+
+.botMarg30 {
+  margin-bottom: 30px !important; }
+
+.botMarg50 {
+  margin-bottom: 50px !important; }
+
+.margL1of20 {
+  margin-left: 6.6666px; }
+
+.margR1of20 {
+  margin-right: 6.6666px; }
+
+.margL2of20 {
+  margin-left: 13.3333px; }
+
+.margR2of20 {
+  margin-right: 13.3333px; }
+
+.margR10 {
+  margin-right: 10px; }
+
+.margR15 {
+  margin-right: 15px; }
+
+.margL10 {
+  margin-left: 10px; }
+
+.sideMarg {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.indent5, .contact.card .content.back > p {
+  margin-left: 5px !important; }
+
+.indent10 {
+  margin-left: 10px !important; }
+
+.indent15 {
+  margin-left: 15px !important; }
+
+.indent20 {
+  margin-left: 20px !important; }
+
+.indent30 {
+  margin-left: 30px !important; }
+
+.indent50 {
+  margin-left: 50px !important; }
+
+.indent70 {
+  margin-left: 70px !important; }
+
+.indent82 {
+  margin-left: 82px !important; }
+
+.noMarg {
+  margin: 0; }
+
+.noBotMarg, .contact.card.reg .content {
+  margin-bottom: 0; }
+
+.noMargR {
+  margin-right: 0 !important; }
+
+.noMargL {
+  margin-left: 0 !important; }
+
+.noBorder {
+  border: none !important; }
+
+.twoColumn {
+  width: 48%; }
+
+.singleSpaced {
+  line-height: 100%;
+  margin: 0; }
+
+.doubleSpaced {
+  line-height: 200%; }
+
+.center, .progressBar > div, #saveAndView {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.vertMid, .header, #navBar, .contact.tile, .grayHeader {
+  display: inline-table; }
+  .vertMid > div, .header > div, #navBar > div, .contact.tile > div, .grayHeader > div, .vertMid a, .header a, #navBar a, .contact.tile a, .grayHeader a {
+    display: table-cell;
+    vertical-align: middle; }
+
+.w100, #navBar, .grayHeader {
+  width: 100%; }
+
+.w66 {
+  width: 66.6667%; }
+
+.w50 {
+  width: 50%; }
+
+.w33, .contact.card, .contact.card .content.back .rolesHist > div {
+  width: 33.3333%; }
+
+.w25, .footerOptions > div {
+  width: 25%; }
+
+.overflowHidden {
+  overflow: hidden; }
+
+/*** LINKS ***/
+a {
+  text-decoration: none; }
+  a:link {
+    color: #1362bb; }
+  a:hover {
+    color: black; }
+  a:visited {
+    color: #8a239d; }
+
+/*** HR ***/
+hr {
+  color: #cccccc;
+  background-color: #cccccc;
+  height: 1px;
+  border: 0;
+  width: 100%;
+  margin: 0 auto; }
+
+/*** FORMS & BUTTONS ***/
+textarea, input {
+  font-family: arial,sans-serif !important; }
+
+input {
+  margin: 4px 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: arial,sans-serif; }
+
+button {
+  font-weight: bold;
+  min-height: 22px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  text-align: center; }
+  button span {
+    padding: 2px 4px; }
+
+button.navigate {
+  background-color: #00802b; }
+  button.navigate:hover {
+    background-color: #009933; }
+
+button.submit, .progressBar button.editDates {
+  background-color: #307692; }
+  button.submit:hover, .progressBar button.editDates:hover {
+    background-color: #3686a5; }
+
+button.snooze {
+  background-color: #b5403d; }
+  button.snooze:hover {
+    background-color: #c24d4a; }
+
+button.gig {
+  background-color: #df5b13; }
+  button.gig:hover {
+    background-color: #ec681f; }
+
+.bigButton, .hugeButton {
+  margin: 10px auto;
+  padding: 0 12px; }
+
+.bigButton {
+  font-size: 1.4em;
+  height: 54px; }
+
+.hugeButton {
+  font-size: 1.8em;
+  height: 62px; }
+
+.disabledButton {
+  color: #999999 !important; }
+  .disabledButton:hover {
+    cursor: default; }
+
+.inheritColor {
+  color: inherit; }
+
+/*** IMAGES (MOSTLY) ***/
+.iconStartLine, .iconInline {
+  display: inline-block;
+  margin-right: 4px; }
+
+.iconInline {
+  margin-left: 4px; }
+
+/* CONTAINERS */
+.card {
+  display: inline-block; }
+  .card .content {
+    font-size: 0.9em; }
+
+#all {
+  width: 100%; }
+
+#grayBar {
+  width: 100%;
+  background-color: #555555;
+  height: 24px;
+  color: white;
+  padding: 0;
+  margin: 0 auto; }
+
+#grayBar .mainArea div {
+  display: inline;
+  margin: 3px 12px 0 12px; }
+
+#grayBar div img {
+  margin-top: 2px; }
+
+/**************** HEADER - main wrappers & nav ****************/
+.mainArea {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3; }
+
+#navBar {
+  background-color: #cccccc;
+  cursor: pointer;
+  font-weight: bold;
+  height: 42px;
+  margin: 10px 0 14px;
+  overflow: hidden;
+  text-align: center;
+  border-spacing: 0; }
+  #navBar .tab {
+    color: inherit !important;
+    padding: 0 10px;
+    border-right: 1px solid #cccccc; }
+  #navBar .tab#elephant {
+    vertical-align: bottom;
+    padding: 0 4px 2px 8px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px; }
+  #navBar .tab#track {
+    background-color: #ec681f;
+    color: white !important;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-right: none; }
+
+/*** LEFT NAV ***/
+#leftNav {
+  width: 120px;
+  padding: 12px 0;
+  text-align: right;
+  float: left;
+  position: relative;
+  font-size: 1.05em; }
+  #leftNav .tab {
+    padding: 10px 22px 10px 10px;
+    color: #555555;
+    width: 90px; }
+  #leftNav .active {
+    background-color: white !important;
+    width: 125px;
+    z-index: 99999;
+    position: relative;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc; }
+    #leftNav .active .tab {
+      color: #b0dcdf !important;
+      font-weight: bold !important; }
+
+/**************** FOOTER ****************/
+#resetGig {
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  border: 2px solid #cccccc;
+  color: #999999; }
+
+/**********************************************/
+/**************** BIG WRAPPERS ****************/
+/*********************************************/
+.mainFrame {
+  overflow: visible;
+  padding-bottom: 20px; }
+  .mainFrame .main #dollarValue {
+    width: 70px;
+    font-size: 1.1em; }
+
+/********************************************/
+/**************** CREATE GIG ****************/
+/********************************************/
+#instructions {
+  overflow: auto;
+  margin-bottom: 30px; }
+
+h2.floating {
+  margin: 10px 0 30px; }
+
+/*** PARITICIPANTS ***/
+/* content wrappers */
+.contact.tile {
+  position: relative;
+  z-index: 999999;
+  float: left;
+  background-color: #3686a5;
+  color: black;
+  height: 30px;
+  margin: 10px 10px 0 0;
+  padding: 0 4px;
+  cursor: move; }
+  .contact.tile > div {
+    margin: 0 10px; }
+  .contact.tile .profile {
+    height: 14px;
+    width: 14px;
+    margin: 4px 6px 0; }
+
+#contactInput {
+  min-width: 220px; }
+
+/* jQuery styling ALL */
+/*generic widgets*/
+.ui-widget-content {
+  font-size: 1em !important;
+  color: #333333;
+  font-family: "arial", sans-serif !important; }
+
+.ui-widget input, .ui-widget select, .ui-widget textarea {
+  font-size: 0.9em !important; }
+.ui-widget .bigButton {
+  font-size: 1.4em !important; }
+
+/*autocomplete*/
+.ui-widget-content {
+  color: #333333 !important;
+  border: 1px solid #cccccc; }
+
+.ui-menu {
+  padding: 1px; }
+
+.ui-autocomplete {
+  overflow: hidden;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  box-shadow: none !important; }
+
+.ui-dialog {
+  overflow: hidden;
+  box-shadow: 0px 0px 6px #cccccc; }
+
+#dialog, .ui-dialog-buttonpane {
+  box-shadow: none !important; }
+
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  background-image: none !important;
+  background-color: #b0dcdf;
+  border: none;
+  border-radius: 0;
+  overflow: hidden !important; }
+
+/*dialog*/
+.ui-widget-header,
+.ui-datepicker-header {
+  background-image: none;
+  background-color: #b0dcdf;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #cccccc;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background-image: none;
+  background-color: #eee;
+  overflow: hidden !important; }
+
+.ui-dialog,
+.ui-datepicker,
+.ui-dialog-buttonpane {
+  margin-top: 0 !important;
+  padding: 0; }
+
+.ui-dialog-buttonpane {
+  border-width: 0 !important; }
+
+.ui-dialog-title {
+  font-size: 1.2em; }
+
+.ui-dialog .ui-dialog-titlebar-close {
+  /*adjusts close button for title font size*/
+  margin: -12px 0 0 0 !important; }
+
+.ui-datepicker table {
+  /*for table*/
+  margin: 0 0 2px 0 !important; }
+
+/* contact cards */
+.header.mini {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 38px; }
+  .header.mini h2 {
+    margin-left: 2px;
+    font-size: 1.3em;
+    font-weight: 500; }
+  .header.mini img {
+    padding-top: 0; }
+
+/* CONTACT CARD generics */
+.contact.card .main {
+  min-height: 171px; }
+.contact.card .content .right {
+  margin-top: 2px; }
+.contact.card .content h3 {
+  font-weight: bold;
+  font-size: 1.2em; }
+.contact.card .content .profile {
+  margin: 0 8px 4px 0; }
+.contact.card .content p, .contact.card .content h3 {
+  margin: 2px 0 6px; }
+.contact.card .content .iconStartLine, .contact.card .content .iconInline {
+  margin-bottom: -4px; }
+.contact.card .content.back .rolesHist > div {
+  font-size: 1.6em; }
+.contact.card.droppable {
+  min-height: 114px; }
+  .contact.card.droppable .subhead {
+    font-size: 0.7em;
+    color: #666;
+    padding: 2px 15px;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc; }
+  .contact.card.droppable .content h3.hint {
+    color: #999999;
+    font-weight: normal;
+    margin: 25px auto 0;
+    text-align: center; }
+.contact.card.dropHere h3.hint {
+  color: #3686a5 !important;
+  font-weight: bold !important; }
+
+/*** DETAILS ***/
+input#gigTitle {
+  min-width: 380px; }
+
+.insetArea {
+  background-color: white;
+  padding: 25px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  margin: 10px; }
+
+/*** TRACK ***/
+input.date {
+  width: 50px; }
+
+.progressBar {
+  width: 620px;
+  text-align: center; }
+  .progressBar .topLabels .progLabel {
+    cursor: default; }
+  .progressBar .progLabel {
+    width: 124px; }
+  .progressBar .actualBar .ball, .progressBar .actualBar .bar {
+    margin-left: 12px; }
+    .progressBar .actualBar .ball:first-child, .progressBar .actualBar .bar:first-child {
+      margin-left: 0; }
+  .progressBar .actualBar .ball {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    height: 20px;
+    width: 20px; }
+  .progressBar .actualBar .bar {
+    height: 6px;
+    width: 80px;
+    margin-top: 7px; }
+
+.ui-datepicker-trigger {
+  margin: 0 0 -7px 6px; }
+
+.reminderMessage {
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0 auto 40px; }
+
+/*** VIEW TICKET ***/
+.editLink, .selectContactInfo {
+  font-size: 0.75em; }
+
+.header .editLink {
+  position: relative;
+  top: 50%;
+  margin-top: -0.45em; }
+
+.grayHeader {
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 4px 4px 0 0;
+  height: 50px;
+  position: relative; }
+  .grayHeader h2 {
+    display: inline-block;
+    font-size: 1.3em;
+    margin: 0 15px; }
+  .grayHeader p {
+    position: relative;
+    top: 50%;
+    right: 15px;
+    margin-top: -0.6em; }
+  .grayHeader img {
+    margin-left: 15px;
+    padding-top: 3px;
+    max-width: 41px; }
+
+.notificationGreen {
+  font-style: italic;
+  color: #009933;
+  text-align: center;
+  padding: 12px 0;
+  margin: 4px 0 30px 0;
+  border: 2px solid #00b33c; }
+
+.grayBox {
+  background-color: #eeeeee;
+  width: 300px;
+  padding: 10px 15px 10px 10px;
+  margin: 0 auto;
+  color: #333333;
+  text-align: left; }
+  .grayBox li {
+    margin-bottom: 0.5em; }
+
+.onExpand {
+  display: none; }
+
+.footerOptions {
+  overflow: auto; }
+  .footerOptions > div {
+    text-align: center;
+    float: left; }
+
+/***************************************/
+/************** REMINDERS **************/
+/***************************************/
+#reminders .mainFrame > .content {
+  width: 824px; }
+
+.reminder.card {
+  width: 260px;
+  margin: 0 10px 10px 0;
+  float: left; }
+  .reminder.card .header {
+    height: 70px;
+    width: 100%; }
+    .reminder.card .header > div {
+      text-align: center;
+      padding: 6px; }
+  .reminder.card .rating {
+    position: absolute;
+    top: 15px; }
+    .reminder.card .rating:nth-of-type(1) {
+      left: 15px; }
+    .reminder.card .rating:nth-of-type(2) {
+      right: 15px;
+      text-align: right; }
+
+/***************************************/
+/************** CONTACTS ***************/
+/***************************************/
+.contact.card.reg {
+  width: 298px;
+  height: 128px;
+  font-size: 0.85em;
+  display: inline-block; }
+  .contact.card.reg h3 {
+    font-size: 1.3em; }
+  .contact.card.reg p {
+    margin: 0 0 2px 0; }
+  .contact.card.reg .grayBG, .contact.card.reg body, .contact.card.reg .disabledButton, .contact.card.reg .progressBar .actualBar .ball, .progressBar .actualBar .contact.card.reg .ball, .contact.card.reg .progressBar .actualBar .bar, .progressBar .actualBar .contact.card.reg .bar {
+    height: 21px;
+    padding: 7px 0 0 13px;
+    font-weight: bold; }
+
+body.contacts .tags {
+  width: 190px;
+  height: 100%; }
+
+.grayBG > .content, body > .content, .disabledButton > .content, .progressBar .actualBar .ball > .content, .progressBar .actualBar .bar > .content {
+  padding: 15px; }

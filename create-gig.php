@@ -1,81 +1,104 @@
 <?php
 $title='Create a New Gig';
 $bodyId='createGig';
-include 'header.php';
+$bodyClass='newGig createGig';
+include 'includes/header-footer/header.php';
 ?>
 
-<div class="contentFrame">
-  <div class="content">
-    <div id="instructions">
-      <h1>Create a new gig</h1>
-      <p class="darkGray">Fill in the details, then begin tracking. You can always edit the gig info later. Once you create the gig, you'll have the option to share it with others. Participants you share the gig with can add more information and keep you up to date on the progress. But don't worry &mdash; everything will be private unless you decide to share.</p>
-    </div>
-    <hr class="topMarg20 botMarg10" />
-    <h2 class="darkGray indent10">Add participants</h2>
-    <hr class="topMarg10 botMarg30" />
-    <h3 id="whosParticipating">Who are the 3 participants in this gig?</h3>
-    <div id="addContact">
-      <input id="contactInput" type="text" placeholder="Type a name to add a participant" />
-      <button id="addToGig" class="submitButton" type="button"><span>Add</span></button>
-    </div>
-    <!-- YOU tile -->
-    <div id ="tileUser" class="contactTile" draggable="true">
-      <div><img class="profile" src="images/profile-pic-16.png" draggable="false" /></div>
-      <div class="sidePad" style="padding-left:0;">You</div>
-    </div>
-    <!-- Joe tile -->
-    <div id ="tileJoe" class="contactTile" draggable="true">
-      <div><img class="profile" src="images/profile-pic-16.png" draggable="false" /></div>
-      <div class="sidePad" style="padding-left:0;"><?php echo $joe->get_fullName(); ?></div>
-    </div>
-    <!-- Claire tile -->
-    <div id ="tileClaire" class="contactTile" draggable="true">
-      <div><img class="profile" src="images/profile-pic-16.png" draggable="false" /></div>
-      <div class="sidePad" style="padding-left:0;"><?php echo $claire->get_fullName(); ?></div>
-    </div>
-    <br />
-    <h3 id="whatRolesQ" class="topMarg10">What roles do they each play?</h3>
-    <div id="whatRolesI" class="small">Drag &amp; drop into the boxes below.</div>
-
-    <?php include 'contact-cards.php'; ?>  <!--contact cards here-->
-
-    <div class="clear"></div>
-    
-    <hr class="topMarg30 botMarg10" />
-    <h2 class="darkGray indent10">Enter details</h2>
-    <hr class="topMarg10 botMarg30" />
-    <h3>Give this gig a title <span class="small">(or leave it as is)</span></h3>
-      <input id="gigTitle" type="text" value="" maxlength="48" />
-      <br />
-      <h3 class="topMarg10">Enter a description</h3>
-      <textarea id="gigDescription" rows="5" cols="140" placeholder="Fill this out now, or leave it for later. Edit it any time you want. If you decide to share this gig, the description will be visible to other participants."></textarea>
-    <div class="personalNotes topMarg20">
-      <div class="header center">
-        <img src="images/your-eyes-only-black.png" />
-        <h2 class="inline black">PERSONAL NOTES</h2>
-        <div class="small topMarg10 darkGray">The information you enter here is confidential.<br />We'll never share your personal notes with anyone.</div>
-      </div>
-      <div class="insetArea">
-        <div class="center">
-          <h3 class="inlineBlock"><strong>How much business is this gig worth to you?</strong><span class="indent20">$</span></h3>
-          <input id="dollarValue" type="text" maxlength="10" />
-        </div>
-        <hr class="topMarg20 botMarg20" />
-        <h3 class="darkGray">Note to self:</h3>
-        <div class="noteFrame">
-          <textarea id="noteToSelf" rows="4" cols="120" placeholder="Write a private note here. No one else will ever see it."></textarea>
-        </div>
-      </div>
-    </div>
-    <hr class="topMarg30 botMarg10" />
-    <h2 class="darkGray indent10">Start tracking</h2>
-    <hr class="topMarg10 botMarg30" />
-    
-    <?php include 'progress-bar.php'; ?>
-    
-    <hr class="topMarg30 botMarg30" />
-    <a id="saveAndView" class="block center" href="view-ticket.php"><button class="tealButton hugeButton" type="button"><span>Save and View Gig</span></button></a>
+<div class="mainFrame">
+  <div id="instructions">
+    <h1>Create a new gig</h1>
+    <p class="darkGray">Fill in the details, then begin tracking. You can always edit the gig info later. Once you create the gig, you'll have the option to share it with others. Participants you share the gig with can add more information and keep you up to date on the progress. But don't worry &mdash; everything will be private unless you decide to share.</p>
   </div>
+  <h2 class="floating">Add participants</h2>
+    
+  <div class="mainFrame">
+    <div class="main margR10">
+      <div class="content">
+        <h3 id="whosParticipating">Who are the 3 participants in this gig?</h3>
+        <div id="addContact">
+          <input id="contactInput" type="text" placeholder="Type a name to add a participant" />
+          <button id="addToGig" class="submit" type="button"><span>Add</span></button>
+        </div>
+        <!-- YOU tile -->
+        <div class="Test contact tile">
+          <div><img class="profile" src="images/profile-pic-16.png" draggable="false" /></div>
+          <div class="sidePad" style="padding-left:0;">You</div>
+        </div>
+        <!-- Joe tile -->
+        <div class="Joe contact tile">
+          <div><img class="profile" src="images/profile-pic-16.png" /></div>
+          <div class="sidePad" style="padding-left:0;"><?php echo $joe->get_fullName(); ?></div>
+        </div>
+        <!-- Claire tile -->
+        <div class="Claire contact tile">
+          <div><img class="profile" src="images/profile-pic-16.png" /></div>
+          <div class="padR10"><?php echo $claire->get_fullName(); ?></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="whatRolesQ" class="topMarg30 clear">What roles do they each play?</h3>
+  <div id="whatRolesI" class="small botMarg10">Drag &amp; drop into the boxes below.</div>
+
+  <?php include 'includes/content/contact-droppables.php'; ?>  <!--contact droppables here-->
+
+  <div class="clear"></div>
+
+  <h2 class="floating">Enter details</h2>
+  <div class="mainFrame">
+    <div class="main">
+      <div class="content">
+        <h3>Enter a title <span class="small">(or leave it as is)</span></h3>
+        <input id="gigTitle" type="text" value="" maxlength="50" placeholder="Give this gig a title (or leave it as is)" />
+      </div>
+    </div>
+  </div>
+  <div class="mainFrame left w66">
+    <div class="main margR1of20">
+      <div class="content">
+        <h3>Enter a description</h3>
+        <textarea id="gigDescription" rows="6" cols="94" placeholder="Enter a description for this gig. Fill it out now, or leave it for later. Edit it any time you want."></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="mainFrame right w33">
+    <div class="main margL2of20 yellowBG">
+      <div class="content">
+        <h3>Notes</h3>
+        <textarea id="noteToSelf" rows="6" cols="40" placeholder="Type in any other notes you want to record about this gig. Include notes to yourself, things not to forget, or whatever else you think of."></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--personal notes-->
+  <div class="mainFrame">
+    <div class="main">
+      <div class="content">
+        <h2 class="teal inlineBlock">Ratings &nbsp;</h2>
+        <div class="small inlineBlock botMarg10 darkGray">Don't worry &mdash; we'll never share your info</div>
+        <div class="center topMarg30 botMarg20">
+          <h3 class="inlineBlock"><strong>How much business is this gig worth to you?</strong><span class="indent20">$</span><input id="dollarValue" class="indent5" type="text" maxlength="10"></input></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="darkGray floating">Start tracking</h2>
+  <div class="mainFrame">
+    <div class="main darkGrayBG">
+      <div class="content lightGray">
+      <h3 class="lightGray">How far along is this gig?</h3>
+      <div class="small">Add/edit dates as you complete each step.</div>
+
+      <?php include 'includes/content/progress-bar.php'; ?>
+
+      </div>
+    </div>
+  </div>
+
+  <a id="saveAndView" href="view-ticket.php"><button class="navigate hugeButton" type="button"><span>Save and View Gig</span></button></a>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'includes/header-footer/footer.php'; ?>
